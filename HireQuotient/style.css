@@ -1,0 +1,136 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding-right: 30px; /* Space for the icon */
+  border-radius: 5px;
+}
+
+.search-container button.search-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Add styling for the icon (e.g., using background-image or font-based icons) */
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin-right: 5px;
+  flex: 1;
+}
+
+.search-icon {
+  padding: 8px 15px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Pagination styles */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  font-weight: bold;
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #000000;
+}
+
+/* Creative Button Styles */
+.edit, .save, .delete, .bulk-delete {
+  padding: 8px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.edit {
+  background-color: #000000;
+  color: white;
+}
+
+.save {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.delete {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.bulk-delete {
+  background: linear-gradient(to right, #595959, #505050);
+  color: white;
+  border: 2px solid #ffffff;
+}
+
+/* Hover Effects */
+.edit:hover, .save:hover, .delete:hover, .bulk-delete:hover {
+  transform: scale(1.1);
+}
+
+/* Row Selection Styles */
+.selected {
+  background-color: #d3d3d3;
+}
+
+/* ... (other existing styles) */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Management Interface</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" /> <!-- Font Awesome stylesheet -->
+
+</head>
+<body>
+  <div class="container">
+    <h1>User Management</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchOnEnter(event)">
+      <!-- <button onclick="search()" class="search-icon">Search</button> -->
+      <button onclick="search()" class="search-icon"><i class="fas fa-search"></i></button>
+    </div>
+    <p>&nbsp;</p>
+
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="selectAll" onchange="toggleSelectAll()"></th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      
+      <tbody id="tableBody">
+        <!-- Sample structure of table rows -->
+        <tr data-id="1">
+          <td><input type="checkbox" data-id="1" onchange="handleRowSelection(event, 1)"></td>
+          <td>1</td>
+          <td>User 1</td>
+          <td>user1@example.com</td>
+          <td>
+            <button onclick="editRow(1)" class="edit">Edit</button>
+            <button onclick="saveChanges(1)" class="save">Save</button>
+            <button onclick="deleteRow(1)" class="delete">Delete</button>
+          </td>
+        </tr>
+        <!-- Repeat the above structure for other users -->
+      </tbody>      
+      
+    </table>
+
+    <button onclick="deleteSelected()" class="bulk-delete">Delete Selected</button>
+
+    <div class="pagination">
+        <button onclick="firstPage()" class="first-page">First</button>
+        <button onclick="prevPage()" class="previous-page">Previous</button>
+        <span id="pageNumbers"></span>
+        <button onclick="nextPage()" class="next-page">Next</button>
+        <button onclick="lastPage()" class="last-page">Last</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
